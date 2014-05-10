@@ -95,7 +95,7 @@ public class SocketOperator implements ISocketOperator
 							connection.getInputStream()));
 			String inputLine;
 
-			while ((inputLine = in.readLine()) != null) {
+			if ((inputLine = in.readLine()) != null) {
 				result = result.concat(inputLine);				
 			}
 			in.close();			
